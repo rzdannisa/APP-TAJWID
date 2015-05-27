@@ -1,0 +1,34 @@
+//---------------------------------------------------------------------------
+
+#ifndef kelas3H
+#define kelas3H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class Tk3 : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel1;
+	TPanel *Panel3;
+	TPanel *syfw;
+	TPanel *Panel2;
+	TPanel *Panel4;
+	TPanel *Panel11;
+	TImage *Image1;
+	void __fastcall Image1Click(TObject *Sender);
+	void __fastcall syfwMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall syfwMouseLeave(TObject *Sender);
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tk3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tk3 *k3;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,130 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "izar_syfw.h"
+#include "Unit.h"
+#include "kelas1.h"
+#include "kelas2.h"
+#include "kelas3.h"
+#include "mh.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tiz_syfw *iz_syfw;
+//---------------------------------------------------------------------------
+__fastcall Tiz_syfw::Tiz_syfw(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p1MouseLeave(TObject *Sender)
+{
+p1->Color=clWhite;
+   p1->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p2MouseLeave(TObject *Sender)
+{
+p2->Color=clWhite;
+   p2->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p3MouseLeave(TObject *Sender)
+{
+p3->Color=clWhite;
+   p3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		   p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::mhMouseLeave(TObject *Sender)
+{
+mh->Color=clWhite;
+   mh->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		   mh->Color=0x0085A016;
+	mh->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p1Click(TObject *Sender)
+{
+		if (!k1)
+	k1 = new Tk1(this);
+  k1->Show();
+  k1->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p2Click(TObject *Sender)
+{
+		if (!k2)
+	k2 = new Tk2(this);
+  k2->Show();
+  k2->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::p3Click(TObject *Sender)
+{
+		if (!k3)
+	k3 = new Tk3(this);
+  k3->Show();
+  k3->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tiz_syfw::mhClick(TObject *Sender)
+{
+		if (!mhuruf)
+	mhuruf = new Tmhuruf(this);
+  mhuruf->Show();
+  mhuruf->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+

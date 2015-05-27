@@ -1,0 +1,85 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "izar_syfw.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm8 *Form8;
+//---------------------------------------------------------------------------
+__fastcall TForm8::TForm8(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p1MouseLeave(TObject *Sender)
+{
+p1->Color=clWhite;
+   p1->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p2MouseLeave(TObject *Sender)
+{
+p2->Color=clWhite;
+   p2->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p3MouseLeave(TObject *Sender)
+{
+p3->Color=clWhite;
+   p3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		   p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::mhMouseLeave(TObject *Sender)
+{
+mh->Color=clWhite;
+   mh->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		   mh->Color=0x0085A016;
+	mh->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+

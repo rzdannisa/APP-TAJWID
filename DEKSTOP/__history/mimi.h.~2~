@@ -1,0 +1,34 @@
+//---------------------------------------------------------------------------
+
+#ifndef mimiH
+#define mimiH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class TForm7 : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel2;
+	TPanel *Panel1;
+	TPanel *Panel7;
+	TPanel *Panel8;
+	TPanel *Panel3;
+	TImage *Image1;
+	TPanel *p1;
+	TPanel *p2;
+	TPanel *p3;
+	TPanel *ts;
+	TPanel *mh;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm7(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm7 *Form7;
+//---------------------------------------------------------------------------
+#endif

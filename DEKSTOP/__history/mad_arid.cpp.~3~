@@ -1,0 +1,84 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "mad_arid.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tmd_arid *md_arid;
+//---------------------------------------------------------------------------
+__fastcall Tmd_arid::Tmd_arid(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Tmd_arid::p1MouseLeave(TObject *Sender)
+{
+p1->Color=clWhite;
+   p1->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::p2MouseLeave(TObject *Sender)
+{
+   p2->Color=clWhite;
+   p2->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::p3MouseLeave(TObject *Sender)
+{
+   p3->Color=clWhite;
+   p3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+ p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::mhMouseLeave(TObject *Sender)
+{
+   mh->Color=clWhite;
+   mh->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmd_arid::mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+    mh->Color=0x0085A016;
+	mh->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+

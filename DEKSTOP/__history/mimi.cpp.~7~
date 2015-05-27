@@ -1,0 +1,168 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "mimi.h"
+#include "kelas1.h"
+#include "kelas2.h"
+#include "kelas3.h"
+#include "mh.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tmi_mi *mi_mi;
+//---------------------------------------------------------------------------
+__fastcall Tmi_mi::Tmi_mi(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Tmi_mi::p1MouseLeave(TObject *Sender)
+{
+   p1->Color=clWhite;
+   p1->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	 p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p2MouseLeave(TObject *Sender)
+{
+	  p2->Color=clWhite;
+   p2->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		 p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p3MouseLeave(TObject *Sender)
+{
+	p3->Color=clWhite;
+   p3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::mhMouseLeave(TObject *Sender)
+{
+	mh->Color=clWhite;
+   mh->Font->Color=0x0085A016;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+		mh->Color=0x0085A016;
+	mh->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::Image1Click(TObject *Sender)
+{
+ Hide();
+  mi_mi->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p1Click(TObject *Sender)
+{
+    if (!k1)
+	k1 = new Tk1(this);
+  k1->Show();
+  k1->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall Tmi_mi::p2Click(TObject *Sender)
+{
+if (!k2)
+	k2 = new Tk2(this);
+  k2->Show();
+ k2->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::p3Click(TObject *Sender)
+{
+if (!k3)
+	k3 = new Tk3(this);
+  k3->Show();
+  k3->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::mhClick(TObject *Sender)
+{
+if (!mhuruf)
+	mhuruf = new Tmhuruf(this);
+  mhuruf->Show();
+  mhuruf->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::clMouseLeave(TObject *Sender)
+{
+cl->Color=0x003F3122;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::clMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+cl->Color=0x001326F2;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::clClick(TObject *Sender)
+{
+  Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tmi_mi::FormShow(TObject *Sender)
+{
+DM1->tajwid->Close();
+DM1->tajwid->SQL->Clear();
+DM1->tajwid->SQL->Add("select *from hukumtajwid where id='19'");
+DM1->tajwid->Open();
+Image2->Picture->LoadFromFile("C:\\xampp\\htdocs\\atajwid\\"+DM1->tajwid->FieldByName("tambahan1")->AsString);
+Image3->Picture->LoadFromFile("C:\\xampp\\htdocs\\atajwid\\"+DM1->tajwid->FieldByName("contoh1")->AsString);
+Image4->Picture->LoadFromFile("C:\\xampp\\htdocs\\atajwid\\"+DM1->tajwid->FieldByName("contoh2")->AsString);
+
+}
+//---------------------------------------------------------------------------
+

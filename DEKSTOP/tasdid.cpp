@@ -1,0 +1,229 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "tasdid.h"
+#include "stdio.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Ttas *tas;
+//---------------------------------------------------------------------------
+__fastcall Ttas::Ttas(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::Panel3MouseLeave(TObject *Sender)
+{
+Panel3->Color=clWhite;
+	Panel3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::Panel3MouseMove(TObject *Sender, TShiftState Shift, int X,
+		  int Y)
+{
+Panel3->Color=0x0085A016;
+   Panel3->Font->Color=clWhite;
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::PIdghamClick(TObject *Sender)
+{
+
+/*if(Label1->Caption == "muncul") {
+		muta->Visible=true;
+		mtjn->Visible=true;
+		Label1->Caption = "hilang";
+	} else if(Label->Caption == "hilang") {
+		muta->Visible=false;
+		mtjn->Visible=false;
+		Label1->Caption = "muncul";
+  */
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::Panel5Click(TObject *Sender)
+{
+if(Edit1->Text == "muncul") {
+		muta->Visible=true;
+		mtjn->Visible=true;
+	} else if(Edit1->Text == "hilang") {
+		muta->Visible=false;
+		mtjn->Visible=false;
+
+
+}
+	}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p1MouseLeave(TObject *Sender)
+{
+   p1->Color=clWhite;
+	p1->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p2MouseLeave(TObject *Sender)
+{
+   p2->Color=clWhite;
+	p2->Font->Color=0x0085A016;
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+  p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::p3MouseLeave(TObject *Sender)
+{
+	  p3->Color=clWhite;
+	p3->Font->Color=0x0085A016;
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::tsMouseLeave(TObject *Sender)
+{
+  ts->Color=clWhite;
+	ts->Font->Color=0x0085A016;
+}
+//---------------------------------------------------------------------------
+void __fastcall Ttas::tsMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+   ts->Color=0x0085A016;
+	ts->Font->Color=clWhite;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Ttas::Panel6Click(TObject *Sender)
+{
+FILE * pFile = fopen ("ver.txt" , "r");
+char mystring [100];
+
+if (pFile == NULL)
+{
+	ShowMessage("Error opening file");
+	return;
+}
+else
+{
+	fgets (mystring , 100 , pFile);
+	puts (mystring);
+	fclose (pFile);
+}
+	ShowMessage("Current version : "+WideString(mystring));
+	TStringList*Send = new TStringList(this);
+	TStringStream * Receive = new TStringStream();
+
+	IdHTTP1->Request->UserAgent = "*";
+	IdHTTP1->Request->ContentType="application/x-www-form-urlencoded";
+
+	IdHTTP1->Post("http://ariefsetya.com/p3m/atajwid/cek.php",Send,Receive);
+
+	ShowMessage("Latest version : "+Receive->DataString);
+
+	NEWVERSION = Receive->DataString;
+
+	if(mystring!=Receive->DataString){
+		Panel7->Show();
+
+		ShowMessage("Your apps isn't up to date, click download to update it");
+}
+else{
+		ShowMessage("Your apps is up to date");
+}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Ttas::Panel7Click(TObject *Sender)
+{
+TStringList*Send = new TStringList(this);
+TStringStream * Receive = new TStringStream();
+IdHTTP1->Request->UserAgent = "*";
+IdHTTP1->Request->ContentType="text/html";
+
+IdHTTP1->Post("http://ariefsetya.com/p3m/atajwid/cek.php?cat=link&ver="+
+NEWVERSION, Send, Receive);
+String URL = Receive->DataString;
+
+Receive->Clear();
+
+IdHTTP1->Post("http://ariefsetya.com/p3m/atajwid/cek.php?cat=filename&ver="+
+NEWVERSION, Send, Receive);
+String fn = Receive->DataString;
+
+Receive->Clear();
+
+IdHTTP1->Post("http://ariefsetya.com/p3m/atajwid/cek.php?cat=sqlupdate&ver="+
+NEWVERSION, Send, Receive);
+String dbupdate = Receive->DataString;
+
+Receive->Clear();
+
+IdHTTP1->Post("http://ariefsetya.com/p3m/atajwid/cek.php?cat=logdata&ver="+
+NEWVERSION,Send,Receive);
+String logdata = Receive->DataString;
+
+Receive->Clear();
+
+ShowMessage("Change Log : \r\n\r\n"+logdata);
+TFileStream *fStream = new TFileStream(fn, fmCreate);
+try
+{
+	try
+	{
+		IdHTTP1->Request->UserAgent = "*";
+		IdHTTP1->Get("http://"+URL, fStream);
+	}
+	__finally
+	{
+		delete fStream;
+		ShowMessage("Download Succeeded");
+	}
+}
+catch(Exception &e)
+{
+	DeleteFile(fn);
+	ShowMessage("Download error");
+}
+
+TMemo*m = new TMemo(this);
+m->Text = NEWVERSION;
+m->Lines->SaveToFile(GetCurrentDir()+"/ver.txt");
+ShowMessage("Your apps is up to date");
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Ttas::Panel18Click(TObject *Sender)
+{
+//Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Ttas::Image1Click(TObject *Sender)
+{
+Hide();
+  tas->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+

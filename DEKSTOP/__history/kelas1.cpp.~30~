@@ -1,0 +1,240 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "Unit1.h"
+#include "kelas1.h"
+#include "kelas2.h"
+#include "kelas3.h"
+#include "mh.h"
+#include "bigunah.h"
+#include "bilagunah.h"
+#include "iqlab.h"
+#include "izar_hlq.h"
+#include "izar_wajib.h"
+#include "ikfa_hqq.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tk1 *k1;
+//---------------------------------------------------------------------------
+__fastcall Tk1::Tk1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Tk1::Image1Click(TObject *Sender)
+{
+ Hide();
+ k1->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+void __fastcall Tk1::Panel4Click(TObject *Sender)
+{
+if (!bgn)
+	bgn = new Tbgn(this);
+  bgn->Show();
+  bgn->BringToFront();
+
+DM1->tajwid->Close();
+DM1->tajwid->SQL->Clear();
+DM1->tajwid->SQL->Add("select *from hukumtajwid where namahukum='"+Panel4->Caption+"'");
+DM1->tajwid->Open();
+bgn->Memo1->Lines->Text=DM1->tajwid->FieldByName("penjelasan")->AsString;
+
+
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall Tk1::p1MouseLeave(TObject *Sender)
+{
+	p1->Color=clWhite;
+	p1->Font->Color=0x0085A016;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p1->Color=0x0085A016;
+	p1->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p2MouseLeave(TObject *Sender)
+{
+	p2->Color=clWhite;
+	p2->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p2->Color=0x0085A016;
+	p2->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p3MouseLeave(TObject *Sender)
+{
+	p3->Color=clWhite;
+	p3->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	p3->Color=0x0085A016;
+	p3->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::mhMouseLeave(TObject *Sender)
+{
+	mh->Color=clWhite;
+	mh->Font->Color=0x0085A016;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+	mh->Color=0x0085A016;
+	mh->Font->Color=clWhite;
+
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall Tk1::p1Click(TObject *Sender)
+{
+if (!k1)
+	k1 = new Tk1(this);
+  k1->Show();
+  k1->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p2Click(TObject *Sender)
+{
+if (!k2)
+	k2 = new Tk2(this);
+  k2->Show();
+  k2->BringToFront();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::p3Click(TObject *Sender)
+{
+if (!k3)
+	k3 = new Tk3(this);
+  k3->Show();
+  k3->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::mhClick(TObject *Sender)
+{
+if (!mhuruf)
+	mhuruf = new Tmhuruf(this);
+  mhuruf->Show();
+  mhuruf->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::Panel5Click(TObject *Sender)
+{
+ if (!bln)
+	bln = new Tbln(this);
+  bln->Show();
+  bln->BringToFront();
+
+DM1->tajwid->Close();
+DM1->tajwid->SQL->Clear();
+DM1->tajwid->SQL->Add("select *from hukumtajwid where namahukum='"+Panel5->Caption+"'");
+DM1->tajwid->Open();
+bln->Memo1->Lines->Text=DM1->tajwid->FieldByName("penjelasan")->AsString;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::Panel6Click(TObject *Sender)
+{
+if (!iqlb)
+	iqlb = new Tiqlb(this);
+  iqlb->Show();
+  iqlb->BringToFront();
+
+DM1->tajwid->Close();
+DM1->tajwid->SQL->Clear();
+DM1->tajwid->SQL->Add("select *from hukumtajwid where namahukum='"+Panel4->Caption+"'");
+DM1->tajwid->Open();
+iqlb->Memo1->Lines->Text=DM1->tajwid->FieldByName("penjelasan")->AsString;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::Panel7Click(TObject *Sender)
+{
+if (!iz_hlq)
+	iz_hlq = new Tiz_hlq(this);
+  iz_hlq->Show();
+  iz_hlq->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall Tk1::Panel8Click(TObject *Sender)
+{
+if (!iz_wajib)
+	iz_wajib = new Tiz_wajib(this);
+  iz_wajib->Show();
+  iz_wajib->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::Panel9Click(TObject *Sender)
+{
+if (!ikf_hqq)
+	ikf_hqq = new Tikf_hqq(this);
+  ikf_hqq->Show();
+  ikf_hqq->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::clMouseLeave(TObject *Sender)
+{
+cl->Color=0x003F3122;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::clMouseMove(TObject *Sender, TShiftState Shift, int X, int Y)
+
+{
+cl->Color=0x001326F2;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tk1::clClick(TObject *Sender)
+{
+  Application->Terminate();
+
+}
+//---------------------------------------------------------------------------
+
+

@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------
+
+#ifndef bilagunahH
+#define bilagunahH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class Tbln : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel6;
+	TPanel *Panel2;
+	TPanel *Panel8;
+	TPanel *Panel4;
+	TImage *Image2;
+	TPanel *p1;
+	TPanel *p2;
+	TPanel *p3;
+	TPanel *ts;
+	TPanel *mh;
+	TPanel *Panel1;
+	TPanel *cl;
+	TMemo *Memo1;
+	TImage *Image1;
+	TImage *Image3;
+	TImage *Image4;
+	void __fastcall FormMouseLeave(TObject *Sender);
+	void __fastcall FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p2MouseLeave(TObject *Sender);
+	void __fastcall p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p3MouseLeave(TObject *Sender);
+	void __fastcall p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall tsMouseLeave(TObject *Sender);
+	void __fastcall tsMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall mhMouseLeave(TObject *Sender);
+	void __fastcall mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p1MouseLeave(TObject *Sender);
+	void __fastcall p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p1Click(TObject *Sender);
+	void __fastcall p2Click(TObject *Sender);
+	void __fastcall p3Click(TObject *Sender);
+	void __fastcall mhClick(TObject *Sender);
+	void __fastcall Image2Click(TObject *Sender);
+	void __fastcall clMouseLeave(TObject *Sender);
+	void __fastcall clMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall clClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tbln(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tbln *bln;
+//---------------------------------------------------------------------------
+#endif

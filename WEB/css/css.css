@@ -1,0 +1,618 @@
+*{
+margin: 0;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	font-family: "Century Gothic";
+}
+.container{
+	width: 100%;
+}
+.slide{
+	width: 100%;
+	height: 320px;
+	background-color: #E2E0E0;
+}
+.slides{
+	width: 730px;
+	height: 320px;
+	margin-top: 0px;
+}
+button.b{
+	width: 100px;
+	height: 30px;
+	border: none;
+	background: #03A678;
+	color: white;
+}
+.logo{
+	position: relative;
+	margin-left: 30px;
+	height: 135px;
+}
+.header{
+	margin: auto;
+	width: 100%;
+	height: 60px;
+	background: #03A678;
+	position: relative;
+}
+.head-text{
+	float: left;
+	font-size: 33px;
+	margin-left: 4px;
+	margin-top: 6px;
+	color: white;
+}
+.menu-wrap{
+	list-style: none;
+	float: right;
+	margin-right: 90px;
+}
+.menu-wrap ul{
+	list-style: none;
+}
+.menu-wrap li{
+	height: 60px;
+	list-style: none;
+	display: inline-table;	
+}
+.menu-wrap ul li a{
+	transition:background .5s;
+	-webkit-transition:background .5s;
+	-moz-transition:background .5s;
+	-o-transition:background .5s;
+	font-size: 10pt !important;
+	height: 40px;
+	list-style: none;
+	width: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+li{
+	font-family: "Segoe UI"!important; 
+}
+ul{
+	font-family: "Segoe UI"!important;
+}
+.menu-wrap ul ul{
+	display: none;
+	list-style: none;
+	position: absolute;
+	background-color: #03A678;
+	width: 217px;
+	padding-left: 0px;
+	padding-right: 0px;
+} 
+.menu-wrap ul ul li a { 
+	transition:background .5s;
+	-webkit-transition:background .5s;
+	-moz-transition:background .5s;
+	-o-transition:background .5s;
+	display:block; 
+	font-size: 9pt !important;
+	margin-left: 0px;
+	text-align:center; 
+	width:158px;
+}
+.menu-wrap ul li a:hover {
+	transition:background .5s;
+	-webkit-transition:background .5s;
+	-moz-transition:background .5s;
+	-o-transition:background .5s;
+	background-color:white; 
+	display:block;
+	color: #03A678 !important;
+}
+.menu-wrap ul li:hover ul {
+	display:block;
+}
+.menu-wrap ul ul li a:hover {
+	transition:background .5s;
+	-webkit-transition:background .5s;
+	-moz-transition:background .5s;
+	-o-transition:background .5s;
+	color:#fff;
+}
+
+.search{
+	margin-top: 8px;
+	margin-right: 10px;
+	width: 210px;
+	height: 30px;
+	float: right;
+	border: none;
+	border-radius: 2px;
+}
+.searchh{
+	margin-top: 5px;
+	margin-right: 10px;
+	width: 240px;
+	height: 30px;
+	float: right;
+	border: none;
+	border-radius: 2px;
+}
+.body-home{
+	width: 85%;
+	text-align: justify;
+	margin: auto;
+}
+.body-m{
+	padding-top: 20px;
+	width: 85%;
+	text-align: justify;
+	margin: auto;
+}
+.mt2{
+	height: 235px;
+}
+input{
+	width: 300px;
+	height: 30px;
+}
+textarea{
+	width: 300px;
+	height: 50px;
+}
+h2{
+	font-family: "Segoe UI";
+	margin-bottom: 20px;
+	width: 455px;
+}
+a.nh{
+	font-weight: bold;
+	font-size: 16pt;
+	color: #03A678 !important;
+	margin-bottom: 10px;
+}
+a.rm{
+	display: inline-block;
+	width: 180px;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding-top: 10px;
+	margin-right: 780px;
+	height: 30px;
+	text-align: center;
+	background: #03A678;
+	color: white !important;
+	font-size: 13pt;
+}
+a.mm{
+	color: #019875 !important;
+	font-size: 13pt;
+}
+a.mmg{
+	margin-top: -50px;
+	margin-left: 10px;
+	padding-top: 10px;
+	border-radius: 10px;
+	display: inline-table;
+	color: white !important;
+	font-size: 12pt;
+	text-align: center;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	background: #03A678;
+}
+a.mmg:hover{
+	background: #03A678;
+}
+a.m{
+	color: #019875 !important;
+	font-size: 18pt;
+}
+
+.gh{
+	border-radius: 11px;
+	margin-right: 10px;
+	float: left;
+	width: 240px;
+	border: 1px solid #343538;
+	height: 200px;
+}
+audio{
+	width: 900px;
+}
+.body-ma{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	width: 100%;
+	height: auto;
+	text-align: justify;
+	margin: auto;
+}
+
+button{
+	border:none;
+	width: 130px;
+	background: #03A678;
+	color: white;
+	height: 40px;
+	font-family: "Century Gothic";
+}
+button:hover{
+	background: #999999;
+	font-family: "Century Gothic";
+}
+.au{
+	width: 300px;
+}
+.mk{
+	margin-left: 20px;
+	height: 1300px;
+}
+.img-e{
+	width: 300px;
+	height: 200px;
+}
+table{
+	width:65%; 
+	float:right; 
+	font-size:10pt; 
+	border-collapse:collapse;
+	margin-right:30px;
+}
+tr:nth-child(odd){
+	background:#eeeeee
+}
+th{
+	background:#03A678; 
+	color:#fff; 
+	font-weight:200
+}
+td,th{
+	padding:7px; 
+	border:1px solid #DADFE1; 
+	text-align:center
+}
+td{
+	color:black
+}
+
+.g{
+	border-radius: 11px;
+	margin-right: 10px;
+	width: 570px;
+	margin-bottom: 20px;
+	border: 1px solid #343538;
+	height: 320px;
+	margin-left: 300px;
+	margin-right: 300px;
+}
+.footer{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	height: 30px;
+	background: #03A678;
+}
+.kisi{
+	width: 1000;
+	height: 300px;
+	margin: auto;
+	padding-bottom: 35px;
+}
+.kisii{
+	width: 280px;
+	background: white;
+	height: 280px;
+	margin: 16px;
+	padding: 8px;
+	text-align: justify;
+	display: inline-table;
+	border-top-right-radius: 30%;
+	border-bottom-left-radius: 30%;
+	border-top: 5px solid #343538;
+	border-bottom: 5px solid #343538;
+}
+.ik{
+	width: 100px;
+	height: 100px;
+	padding-left: 100px;
+}
+.masuk{
+    width: 400px !important;
+    height:40px !important;
+    margin-top:10px;
+    margin-bottom: 15px;
+    font-size: 12pt;
+    font-family: "Century Gothic";
+    border: 1px solid #323538;
+    color:#343538;
+}
+ 
+#tombol{
+    width: 100px;
+    height:40px;
+    border-radius: 3px;
+    margin-top:15px;
+    background: #343538;
+    border:none;
+    color:#fff;
+    font-size: 14pt;
+    outline:none;
+}
+#tombol:hover{
+    background: #999999;
+}
+@media only screen and (max-width:800px) {
+
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	font-family: "Century Gothic";
+}
+.container{
+	width: 100%;
+}
+.slide{
+	display: none;
+	padding-top: -1000px;
+}
+.slides{
+	display: none;
+}
+.search{
+	margin-top: 8px;
+	width: 91.6%;
+	height: 30px;
+	margin-left: 20px;
+	border: 1px solid #343538;
+	border-radius: 2px;
+}
+.searchh{
+	margin-left: 20px;
+	width:100%;
+	height: 30px;
+	border: none;
+}
+.header{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	background: white;
+}
+.head-text{
+	font-size: 33px;
+	margin-left: 3px;
+	margin-top: 6px;
+	margin-left: 35px;
+	color: white;
+	text-align: center;
+}
+.menu-wrap{
+	list-style: none;
+	float: none;
+	width: 100%;
+}
+.menu-wrap li{
+	height: 30px;
+	width: 100%;
+	margin-left: -20px;
+	list-style: none;
+	background-color: #03A678;	
+}
+.menu-wrap ul li a{
+	font-size: 10pt !important;
+	height: 30px;
+	list-style: none;
+	width: auto;
+	padding-top: 20px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+li{
+	font-family: "Segoe UI"!important; 
+}
+ul{
+	font-family: "Segoe UI"!important;
+}
+.menu-wrap ul ul{
+	display: none;
+	list-style: none;
+	position: absolute;
+	background-color: #03A678;
+	width: 68%;
+	margin-left: 35px;
+} 
+.menu-wrap ul ul:hover{
+	display: none;
+	list-style: none;
+	position: absolute;
+	background-color: #03A678;
+	width: 65%;
+	border: none;
+} 
+.menu-wrap ul ul li a { 
+	display:block; 
+	font-size: 8pt !important;
+	text-align:center; 
+	width:79%;
+	height: 20px;
+	border: none;
+}
+.menu-wrap ul li a:hover {
+	background-color:white; 
+	display:block;
+	width: 85%;
+	color: #03A678 !important;
+}
+.menu-wrap ul li:hover ul {
+	display:block;
+}
+.menu-wrap ul ul li a:hover {
+	color:#fff;
+	width: 76%;
+	height: 20px;
+}
+.body-home{ 
+	height: 1300px;
+	padding-top: 300px;
+	width: 95%;
+	text-align: justify;
+	font-size: 10pt;
+
+}
+.footer{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding-top: 11px;
+	height: 30px;
+	font-size: 7pt;
+	background: #03A678;
+}
+.kisi{
+	width: 90%;
+	height: 200px;
+	padding-bottom: 35px;
+}
+.kisii{
+	width: 84%;
+	background: white;
+	height: 200px;
+	padding: 8px;
+	font-size: 10pt;
+	text-align: justify;
+	display: inline-table;
+	border-top-right-radius: 30%;
+	border-bottom-left-radius: 30%;
+	border-top: 5px solid #343538;
+	border-bottom: 5px solid #343538;
+}
+.ik{
+	width: 70px;
+	height: 70px;
+	padding-left: 80px;
+}
+.body-m{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 250px;
+	width: 90%;
+	height: auto;
+	text-align: justify;
+	margin: auto;
+}
+h2{
+	font-size: 14pt !important;
+	width: 100%;
+}
+.mt2{
+	height: 235px;
+}
+.pj{
+	margin-top: -20px;
+	font-size: 9pt;
+}
+a.nh{
+	font-weight: bold;
+	font-size: 13pt;
+	color: #03A678 !important;
+}
+a.mm{
+	color: #03A678 !important;
+	font-size: 8pt;
+}
+.gh{
+	display: none;
+}
+a.rm{
+	display: inline-block;
+	width: 100%;
+	border-radius: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	height: 30px;
+	text-align: center;
+	background: #006699;
+	color: white !important;
+	font-size: 13pt;
+}
+audio{
+	margin-top: 15px;
+	width: 100%;
+}
+img{
+	width: 100%;
+}
+.g{
+	margin: 0px;
+	border-radius: 11px;
+	margin-right: 10px;
+	width: 100%;
+	border: 1px solid #343538;
+	height: 200px;
+}
+.pju{
+	font-size: 11pt !important;
+}
+.masuk{
+    width: 100% !important;
+    height:35px !important;
+    margin-top:10px;
+    margin-bottom: 15px;
+    font-size: 12pt;
+    font-family: "Century Gothic";
+    border: 1px solid #323538;
+    color:#343538;
+}
+table{
+	margin-top: 20px;
+	font-size: 8pt !important;
+	float: none;
+	width: 97%;
+}
+tbody{
+	width: 100%;
+}
+textarea{
+	margin-left: -20px;
+	width: 100%;
+}
+input{
+	width: 100%;
+	margin-left: -20px;
+}
+.mk{
+	margin-left: 0px;
+}
+button{
+	margin-right: 30px;
+	margin-left: -17px;
+	display: inline-table;
+	width: 80px;
+	font-size: 10pt;
+}
+.body-ma{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 280px;
+	width: 100%;
+	height: auto;
+	text-align: justify;
+	margin: auto;
+}
+.logo{
+	height: 240px;
+}
+}

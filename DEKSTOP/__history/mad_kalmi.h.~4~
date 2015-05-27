@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+
+#ifndef mad_kalmiH
+#define mad_kalmiH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class TForm4 : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *Panel6;
+	TPanel *Panel2;
+	TPanel *Panel8;
+	TPanel *Panel1;
+	TImage *Image1;
+	TPanel *p1;
+	TPanel *p2;
+	TPanel *p3;
+	TPanel *ts;
+	TPanel *mh;
+	void __fastcall p1MouseLeave(TObject *Sender);
+	void __fastcall p1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p2MouseLeave(TObject *Sender);
+	void __fastcall p2MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall p3MouseLeave(TObject *Sender);
+	void __fastcall p3MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+	void __fastcall mhMouseLeave(TObject *Sender);
+	void __fastcall mhMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm4(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm4 *Form4;
+//---------------------------------------------------------------------------
+#endif

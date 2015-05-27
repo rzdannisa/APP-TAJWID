@@ -1,0 +1,79 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <tchar.h>
+//---------------------------------------------------------------------------
+USEFORM("mad_kalmi.cpp", Form4);
+USEFORM("mad_lin.cpp", Form3);
+USEFORM("mad_tobi.cpp", Form2);
+USEFORM("mad_arid.cpp", md_arid);
+USEFORM("mad_badal.cpp", Form5);
+USEFORM("mad_jaiz.cpp", mad_jz);
+USEFORM("tasdid.cpp", tas);
+USEFORM("Unit1.cpp", awal);
+USEFORM("mad_wajib.cpp", md_wajib);
+USEFORM("mimi.cpp", Form7);
+USEFORM("ikfa_hqq.cpp", ikf_hqq);
+USEFORM("ikfa_syfw.cpp", Form6);
+USEFORM("iqlab.cpp", iqlb);
+USEFORM("bigunah.cpp", bgn);
+USEFORM("bilagunah.cpp", bln);
+USEFORM("depan.cpp", dpn);
+USEFORM("kelas1.cpp", k1);
+USEFORM("kelas2.cpp", k2);
+USEFORM("kelas3.cpp", k3);
+USEFORM("izar_hlq.cpp", iz_hlq);
+USEFORM("izar_syfw.cpp", Form8);
+USEFORM("izar_wajib.cpp", iz_wajib);
+USEFORM("mh.cpp", mhuruf);
+//---------------------------------------------------------------------------
+int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
+{
+	try
+	{
+		Application->Initialize();
+		Application->MainFormOnTaskBar = true;
+		Application->CreateForm(__classid(Tawal), &awal);
+		Application->CreateForm(__classid(Tk1), &k1);
+		Application->CreateForm(__classid(Tk2), &k2);
+		Application->CreateForm(__classid(Tk3), &k3);
+		Application->CreateForm(__classid(Tbgn), &bgn);
+		Application->CreateForm(__classid(Tbln), &bln);
+		Application->CreateForm(__classid(Tiqlb), &iqlb);
+		Application->CreateForm(__classid(Tiz_hlq), &iz_hlq);
+		Application->CreateForm(__classid(Tiz_wajib), &iz_wajib);
+		Application->CreateForm(__classid(Tikf_hqq), &ikf_hqq);
+		Application->CreateForm(__classid(TForm2), &Form2);
+		Application->CreateForm(__classid(Tmad_jz), &mad_jz);
+		Application->CreateForm(__classid(Tmd_wajib), &md_wajib);
+		Application->CreateForm(__classid(Tmd_arid), &md_arid);
+		Application->CreateForm(__classid(Tdpn), &dpn);
+		Application->CreateForm(__classid(TForm3), &Form3);
+		Application->CreateForm(__classid(TForm4), &Form4);
+		Application->CreateForm(__classid(TForm5), &Form5);
+		Application->CreateForm(__classid(TForm6), &Form6);
+		Application->CreateForm(__classid(TForm7), &Form7);
+		Application->CreateForm(__classid(TForm8), &Form8);
+		Application->CreateForm(__classid(Ttas), &tas);
+		Application->CreateForm(__classid(Tmhuruf), &mhuruf);
+		Application->Run();
+	}
+	catch (Exception &exception)
+	{
+		Application->ShowException(&exception);
+	}
+	catch (...)
+	{
+		try
+		{
+			throw Exception("");
+		}
+		catch (Exception &exception)
+		{
+			Application->ShowException(&exception);
+		}
+	}
+	return 0;
+}
+//---------------------------------------------------------------------------

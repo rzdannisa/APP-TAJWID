@@ -1,0 +1,24 @@
+object DM1: TDM1
+  OldCreateOrder = False
+  Height = 429
+  Width = 549
+  object config: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Data' +
+      ' Source=btajwid3;Initial Catalog=btajwid'
+    LoginPrompt = False
+    Left = 264
+    Top = 24
+  end
+  object tajwid: TADOQuery
+    Active = True
+    Connection = config
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from hukumtajwid;')
+    Left = 288
+    Top = 64
+  end
+end
