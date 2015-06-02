@@ -1,7 +1,7 @@
 <?php
-$dsn = "mysql:dbname=ariefset_arizda;host=174.120.70.217;charset=utf8";
-$user = "ariefset_arizda";
-$pass = "arizda";
+$dsn = "mysql:dbname=nama_database;host=nama_host;charset=utf8";
+$user = "nama_user";
+$pass = "password_user";
 
 try {
 	$dbh= new PDO($dsn, $user, $pass);
@@ -10,11 +10,11 @@ try {
 }
 
 
-$con = mysql_connect("174.120.70.217","ariefset_arizda","arizda");
+$con = mysql_connect("nama_host","nama_user","password_user");
 mysql_set_charset('utf8',$con);
-mysql_select_db("ariefset_arizda",$con);
+mysql_select_db("nama_database",$con);
 
-$mysqli = @new mysqli('174.120.70.217', 'ariefset_arizda', 'arizda', 'ariefset_arizda');
+$mysqli = @new mysqli('nama_host', 'nama_user', 'password_user', 'nama_database');
 
 if($mysqli->connect_errno) die('Connection Error!');
 else{
